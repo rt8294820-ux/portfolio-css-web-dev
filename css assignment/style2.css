@@ -1,0 +1,364 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f8fa;
+    color: #242327;
+}
+
+/* Header and Navigation - Flexbox */
+header {
+    background-color: #3414b4;
+    padding: 1rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.7rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section - Flexbox */
+.hero {
+    min-height: 85vh;
+    padding: 4rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-content {
+    flex: 1;
+    animation: slideIn 1s ease;
+}
+
+.welcome {
+    color: #0000ba; 
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 1rem 0;
+}
+
+.hero h1 span {
+    color: #0000ba; 
+}
+
+.animated-text {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.animated-text span {
+    color: #0000ba; 
+}
+
+.hero-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 75%;
+    max-width: 22rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5rem solid #130793;
+    box-shadow: 0 0.5rem 2rem #0c0768;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #2307c2e2;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0b0581;
+    transform: translateY(-5px);
+}
+#topbtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #2307c2e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Common Section Styling */
+.section {
+    padding: 4rem 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #0000ba; 
+}
+
+/* About Section */
+.about {
+    background-color:  #e9e7fb;
+}
+
+.about-content {
+    max-width: 50rem;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+}
+
+/* Skills Section - CSS Grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0.5rem 1.5rem rgba(121,82,179,0.25);
+}
+
+.skill-card h3 {
+    color: #2600ff;
+    margin-bottom: 0.7rem;
+}
+
+/* Projects Section - CSS Grid */
+.projects {
+    background-color: #e9e7fb;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.04);
+}
+
+.project-card h3 {
+    color: #0000ba;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: #0000ba;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 35rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #c5b4df;
+    border-radius: 0.6rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7952b3;
+    box-shadow: 0 0 0 3px rgba(121,82,179,0.12);
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    background-color: #29243d;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Keyframe Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes colorChange {
+    from {
+        color: #7952b3;
+    }
+
+    to {
+        color: #d66ba0;
+    }
+}
+
+/* Tablet Responsive Design */
+@media screen and (max-width: 992px) {
+
+    .hero {
+        padding: 3rem 5%;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 6%;
+    }
+
+    .hero-image img {
+        width: 65%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 3rem 6%;
+    }
+
+    .contact-form button {
+        align-self: center;
+    }
+}
